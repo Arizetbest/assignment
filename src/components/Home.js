@@ -91,67 +91,81 @@ const Home = ({ history }) => {
             <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
               <form className="m-auto mt-10 p-5 w-3/4" onSubmit={handleSignUp}>
                 <div>
-                  <label htmlFor="name" className="mr-2">
-                    Full Name
-                  </label>
-                  <input
-                    onChange={handleChange}
-                    required
-                    name="name"
-                    id="name"
-                    className=" p-2 bg-yellow-100 my-5 rounded-md w-2/3 h-10  border border-solid border-blue-700"
-                  />
-                  <label htmlFor="phone" className="mr-8">
-                    Phone
-                  </label>
-                  <input
-                    onChange={handleChange}
-                    required
-                    name="phone"
-                    id="phone"
-                    className="p-2 bg-yellow-100 my-5 rounded-md w-2/3 h-10  border border-solid border-blue-700"
-                  />
-                  <label htmlFor="address" className="mr-5">
-                    Address
-                  </label>
-                  <input
-                    onChange={handleChange}
-                    required
-                    name="address"
-                    id="address"
-                    className="p-2 bg-yellow-100 my-5 rounded-md w-2/3 h-10  border border-solid border-blue-700"
-                  />
-                  <label htmlFor="country" className="mr-5">
-                    Country
-                  </label>
-                  <input
-                    onChange={handleChange}
-                    required
-                    name="country"
-                    id="country"
-                    className=" p-2 bg-yellow-100 my-5 rounded-md w-2/3 h-10  border border-solid border-blue-700"
-                  />
-                  <label htmlFor="email" className="mr-9">
-                    Email
-                  </label>
-                  <input
-                    onChange={handleChange}
-                    required
-                    name="email"
-                    id="email"
-                    className=" p-2 bg-yellow-100 my-5 rounded-md w-2/3 h-10  border border-solid border-blue-700"
-                  />
-                  <label htmlFor="password" className="mr-2">
-                    Password
-                  </label>
-                  <input
-                    onChange={handleChange}
-                    required
-                    type="password"
-                    name="password"
-                    id="password"
-                    className=" p-2 bg-yellow-100 my-5 rounded-md w-2/3 h-10  border border-solid border-blue-700"
-                  />
+                  <div style={inputs}>
+                    <label htmlFor="name" className="pt-5">
+                      Full Name
+                    </label>
+                    <input
+                      onChange={handleChange}
+                      required
+                      name="name"
+                      id="name"
+                      className=" p-2 bg-blue-200-100 my-5 rounded-md w-2/3 h-10  border border-solid border-blue-700"
+                    />
+                  </div>
+                  <div style={inputs}>
+                    <label htmlFor="phone" className="pt-5">
+                      Phone
+                    </label>
+                    <input
+                      onChange={handleChange}
+                      required
+                      name="phone"
+                      id="phone"
+                      className="p-2 bg-blue-200-100  my-5 rounded-md w-2/3 h-10  border border-solid border-blue-700"
+                    />
+                  </div>
+                  <div style={inputs}>
+                    <label htmlFor="address" className="pt-5">
+                      Address
+                    </label>
+                    <input
+                      onChange={handleChange}
+                      required
+                      name="address"
+                      id="address"
+                      className="p-2 bg-blue-200-100 my-5 rounded-md w-2/3 h-10  border border-solid border-blue-700"
+                    />
+                  </div>
+                  <div style={inputs}>
+                    <label htmlFor="country" className="pt-5">
+                      Country
+                    </label>
+                    <input
+                      onChange={handleChange}
+                      required
+                      name="country"
+                      id="country"
+                      className=" p-2 bg-blue-200-100  my-5 rounded-md w-2/3 h-10  border border-solid border-blue-700"
+                    />
+                  </div>
+                  <div style={inputs}>
+                    <label htmlFor="email" className="pt-5">
+                      Email
+                    </label>
+                    {/* here i used the type email to make sure the user submits valid email */}
+                    <input
+                      onChange={handleChange}
+                      required
+                      type="email"
+                      name="email"
+                      id="email"
+                      className=" p-2 bg-blue-200-100  my-5 rounded-md w-2/3 h-10  border border-solid border-blue-700"
+                    />
+                  </div>
+                  <div style={inputs}>
+                    <label htmlFor="password" className="pt-5">
+                      Password
+                    </label>
+                    <input
+                      onChange={handleChange}
+                      required
+                      type="password"
+                      name="password"
+                      id="password"
+                      className=" p-2 bg-blue-200-100  my-5 rounded-md w-2/3 h-10  border border-solid border-blue-700"
+                    />
+                  </div>
                 </div>
                 <span> Already have account ? </span>
                 <button
@@ -171,28 +185,32 @@ const Home = ({ history }) => {
 
               <form className="m-auto mt-40 p-5 w-3/4" onSubmit={handleSignIn}>
                 <div>
-                  <label htmlFor="email" className="mr-12">
-                    Email
-                  </label>
-                  <input
-                    onChange={handleChange}
-                    required
-                    type="email"
-                    name="email"
-                    id="email"
-                    className="p-2 bg-yellow-100 my-5 rounded-md w-2/3 h-10  border border-solid border-blue-700"
-                  />
-                  <label htmlFor="password" className="mr-5">
-                    Password
-                  </label>
-                  <input
-                    onChange={handleChange}
-                    required
-                    type="password"
-                    name="password"
-                    id="password"
-                    className=" p-2 bg-yellow-100 my-5 rounded-md w-2/3 h-10  border border-solid border-blue-700"
-                  />
+                  <div style={inputs}>
+                    <label htmlFor="email" className="pt-5">
+                      Email
+                    </label>
+                    <input
+                      onChange={handleChange}
+                      required
+                      type="email"
+                      name="email"
+                      id="email"
+                      className="p-2 bg-blue-200-100  my-5 rounded-md w-2/3 h-10  border border-solid border-blue-700"
+                    />
+                  </div>
+                  <div style={inputs}>
+                    <label htmlFor="password" className="pt-5">
+                      Password
+                    </label>
+                    <input
+                      onChange={handleChange}
+                      required
+                      type="password"
+                      name="password"
+                      id="password"
+                      className=" p-2 bg-blue-200-100  my-5 rounded-md w-2/3 h-10  border border-solid border-blue-700"
+                    />
+                  </div>
                 </div>
                 <span> Don't have account ? </span>
                 <button
@@ -230,6 +248,13 @@ const Home = ({ history }) => {
       </div>
     </div>
   );
+};
+
+const inputs = {
+  width: "400px",
+  display: "flex",
+  alignItems: "start",
+  justifyContent: "space-between",
 };
 
 export default Home;
